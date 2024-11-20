@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory Manager</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Inventory Manager</h1>
+    <form id="inventoryForm">
+      <input type="text" id="itemName" placeholder="Enter Item Name" required>
+      <input type="number" id="itemQuantity" placeholder="Enter Quantity" min="1" required>
+      <input type="number" id="itemPrice" placeholder="Enter Price (₹)" min="0.01" step="0.01" required>
+      <button type="button" id="addItemBtn">Add</button>
+      <button type="button" id="updateItemBtn" style="display: none;">Update</button>
+    </form>
+    
+    <table id="inventoryTable">
+      <thead>
+        <tr>
+          <th>Code</th>
+          <th>Name</th>
+          <th>Qty</th>
+          <th>Price</th>
+          <th>Total</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Items will show here -->
+      </tbody>
+    </table>
+    
+    <div class="summary">
+      <p>Total Goods: <span id="totalGoods">0</span></p>
+      <p>Total Cost: ₹<span id="totalCost">0.00</span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
