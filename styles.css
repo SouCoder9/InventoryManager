@@ -1,0 +1,135 @@
+/* Make the body have a dark transparent background */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000000; /* Black background color */
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden; /* Hide scrollbars if necessary */
+  position: relative;
+}
+
+/* Spline 3D Element as background with blur effect */
+.spline-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Place behind content */
+  filter: blur(15px); /* Blur effect for the 3D element */
+  overflow: hidden;
+}
+
+/* Glassy dark container style */
+.container {
+  max-width: 800px;
+  width: 90%;
+  background: rgba(0, 0, 0, 0.4); /* Transparent black background */
+  backdrop-filter: blur(12px); /* Adds a blur effect for a glassy look */
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for glass effect */
+  text-align: center;
+  position: relative;
+  z-index: 1; /* Above the Spline background */
+}
+
+/* General heading styles */
+h1 {
+  font-size: 28px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.7); /* Slight shadow for better readability */
+}
+
+/* Style for form inputs and buttons */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+form input, form select, button {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1); /* Slightly transparent for a glassy effect */
+  color: #e0e0e0;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+button {
+  background: rgba(30, 144, 255, 0.7); /* Dark blue button with transparency */
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: rgba(0, 86, 179, 0.8);
+}
+
+/* Style for the discount section */
+.discount-section {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.discount-section label {
+  color: #ffffff;
+}
+
+/* Centered Inventory Table Styles */
+.table-wrapper {
+  display: flex;
+  justify-content: center; /* Center the table horizontally */
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  max-width: 700px;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background: rgba(0, 0, 0, 0.5); /* Dark and semi-transparent */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+table th, table td {
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.6); /* Shadow for text readability */
+}
+
+table th {
+  background: rgba(0, 0, 0, 0.6); /* Darker background for headers */
+}
+
+table td {
+  background: rgba(0, 0, 0, 0.4); /* Slightly transparent for a glassy effect */
+}
+
+/* Summary Section Styles */
+.summary {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 20px;
+  color: #ffffff;
+  text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.7); /* For better readability */
+}
+
+/* Input focus styles for a clean effect */
+form input:focus, form select:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* White shadow for focus */
+}

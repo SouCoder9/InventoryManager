@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory Management System with Categories and Discounts</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Spline 3D Element as Background -->
+  <div class="spline-background">
+    <spline-viewer url="https://prod.spline.design/HOaxmKaIlgG7ZvT4/scene.splinecode"></spline-viewer>
+  </div>
+
+  <div class="container">
+    <h1>Inventory Management System</h1>
+    <form id="inventoryForm">
+      <input type="text" id="itemName" placeholder="Enter Item Name" required>
+      <input type="number" id="itemQuantity" placeholder="Enter Quantity" min="1" required>
+      <input type="number" id="itemPrice" placeholder="Enter Price (₹)" min="0.01" step="0.01" required>
+      
+      <!-- Category Dropdown -->
+      <select id="itemCategory" required>
+        <option value="" disabled selected>Select Category</option>
+        <option value="Foods">Foods</option>
+        <option value="Drinks">Drinks</option>
+        <option value="Commodities">Commodities</option>
+      </select>
+
+      <button type="button" id="addItemBtn">Add Item</button>
+      <button type="button" id="updateItemBtn" style="display: none;">Update Item</button>
+    </form>
+    
+    <!-- Discount Section -->
+    <div class="discount-section">
+      <label for="discount">Discount (%): </label>
+      <input type="number" id="discount" min="0" max="100" placeholder="Enter Discount %" step="0.01">
+      <button type="button" id="applyDiscountBtn">Apply Discount</button>
+    </div>
+
+    <!-- Centered Inventory Table -->
+    <div class="table-wrapper">
+      <table id="inventoryTable">
+        <thead>
+          <tr>
+            <th>Item Code</th>
+            <th>Category</th>
+            <th>Item Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Rows will be added dynamically -->
+        </tbody>
+      </table>
+    </div>
+    
+    <!-- Summary Section -->
+    <div class="summary">
+      <p>Total Goods: <span id="totalGoods">0</span></p>
+      <p>Total Cost: ₹<span id="totalCost">0.00</span></p>
+      <p>Discounted Total: ₹<span id="discountedTotal">0.00</span></p>
+    </div>
+  </div>
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.45/build/spline-viewer.js"></script>
+  
+  <script src="script.js"></script>
+</body>
+</html>
